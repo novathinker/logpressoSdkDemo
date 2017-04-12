@@ -1,0 +1,95 @@
+@CHARSET "EUC-KR";
+
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto-Regular'), url('./Roboto-Regular.ttf')
+		format('truetype');
+}
+
+html,
+body {
+    height: 95%;
+}
+
+body {
+	margin-top: 45px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	background-color: #f8f8f8;
+}
+
+#fixed-menu {
+	width: 100%;
+	height: 35px;
+	background-color: #235292;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+}
+
+#main-content {
+	width: 100%;
+}
+
+#logoimg {
+	margin-left: 20px;
+	margin-top: 5px;
+	float: left;
+	width: 124px;
+	height: 27px;
+}
+
+.menu {
+	float: left;
+	margin-left: 40px;
+	margin-top: 10px;
+	color: #ffffff;
+	font-family: 'Jeju Gothic';
+}
+
+#menu_img {
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	width: 206px;
+	height: 27px;
+}
+
+
+/*
+ * Start Bootstrap - Full Slider (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+footer {
+    margin: 50px 0;
+}

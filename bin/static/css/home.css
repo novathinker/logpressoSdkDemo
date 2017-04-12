@@ -1,0 +1,128 @@
+@CHARSET "EUC-KR";
+
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto-Regular'), url('./Roboto-Regular.ttf')
+		format('truetype');
+}
+body {
+	margin-top: 50px;
+	margin-left: 10px;
+	background-color: #F5F5F5;
+}
+
+#fixed-menu {
+	width: 100%;
+	height: 35px;
+	background-color: #235292;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+}
+
+#main-content {
+	width: 100%;
+}
+
+#logoimg {
+	margin-left: 20px;
+	margin-top: 5px;
+	float: left;
+	width: 124px;
+	height: 27px;
+}
+
+.menu {
+	float: left;
+	margin-left: 40px;
+	margin-top: 10px;
+	color: #ffffff;
+	font-family: 'Jeju Gothic';
+}
+
+#menu_img {
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	width: 206px;
+	height: 27px;
+}
+
+.container {
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+}
+
+.chart-panel {
+	border: 1px solid #dadada;
+	position: relative;
+	background: #fff;
+	box-sizing: border-box;
+	top: 5px;
+	bottom: 5px;
+	right: 5px;
+	left: 5px;
+	border-radius: 5px;
+	border-color: #ddd;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.short-panel {
+	-webkit-flex: none;
+	flex: none;
+	width: 300px;
+	min-width: 200px;
+	height: 250px;
+	min-height: 200px;
+}
+
+.normal-panel {
+	-webkit-flex: 1;
+	flex: 1;
+	/*    width: calc(100% - 10px);*/
+	min-width: 300px;
+	height: 250px;
+	min-height: 200px;
+}
+
+h4 {
+	padding-left: 20px;
+	font-family: 'Jeju Gothic';
+	overflow: hidden;
+	max-width: calc(100% - 100px);
+	white-space: nowrap;
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+
+.linebar {
+	height: 85%;
+	width: 100%;
+}
+
+#threads {
+	height: 85%;
+	width: 100%;
+}
+
+#gc {
+	height: 85%;
+	width: 100%;
+}
+
+#speed-title {
+	margin-top: calc(100% - 250px);
+	text-align: center;
+	font-family: 'Jeju Gothic';
+}
+
+#speed {
+	color: #081245;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>Logpresso SPRING 예제 ::: Home</title>
+<link rel="stylesheet" href="/css/morris.css" />
+<link rel="stylesheet" href="/css/home.css" />
+<script type="text/javascript" src="/js/jquery.3.2.1.js"></script>
+<script type="text/javascript" src="/js/raphael.2.2.7.js"></script>
+<script type="text/javascript" src="/js/morris.min.0.5.1.js"></script>
+<script type="text/javascript" src="/js/google_chart.js"></script>
+<script type="text/javascript" src="/js/home.js"></script>
+
+</head>
+<body>
+	<div id="fixed-menu">
+		<img id="logoimg" src="/image/menu_logo.png" />
+		<div class="menu">홈</div>
+		<div class="menu">
+			<span onclick="location.href='/query'" style="cursor: pointer;">쿼리</span>
+		</div>
+		<div class="menu">
+			<span onclick="location.href='/sdk'" style="cursor: pointer;">SDK 설명</span>
+		</div>
+		<img id="menu_img" src="/image/btn_sns01.png" usemap="#snsimgmap" />
+		<map id="snsimgmap" name="snsimgmap">
+			<area shape="circle" alt="eediom" title="eediom" coords="13,13,13"
+				href="https://logpresso.com" target="_blank" />
+			<area shape="circle" alt="example" title="example" coords="50,13,13"
+				href="https://github.com/araqne/logpresso-examples" target="_blank" />
+			<area shape="circle" alt="sdk" title="sdk" coords="87,13,13"
+				href="https://github.com/logpresso/logpresso-sdk-java"
+				target="_blank" />
+			<area shape="circle" alt="facebook" title="facebook"
+				coords="122,13,13" href="https://www.facebook.com/eediom"
+				target="_blank" />
+			<area shape="circle" alt="linkedin" title="linkedin"
+				coords="158,13,13"
+				href="https://www.linkedin.com/company/eediom-inc-" target="_blank" />
+			<area shape="circle" alt="twitter" title="twitter" coords="193,13,13"
+				href="https://twitter.com/logpresso" target="_blank" />
+		</map>
+	</div>
+	<div class="container">
+		<div class="chart-panel  short-panel">
+			<h4>수집 속도</h4>
+			<div id="speed-title">
+				<p>수집 속도</p>
+				<h2>
+					<span id="speed"></span> 건/초
+				</h2>
+			</div>
+		</div>
+
+		<div class="chart-panel normal-panel">
+			<h4>최근 5분 수집 추이(5초 단위)</h4>
+			<div class="linebar" id="logTrend"></div>
+		</div>
+
+		<div class="chart-panel normal-panel">
+			<h4>최근 10분 테이블 입력</h4>
+			<div class="linebar" id="inputTable"></div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="chart-panel short-panel">
+			<h4>스레드 상태</h4>
+			<div id="threads"></div>
+		</div>
+
+		<div class="chart-panel normal-panel">
+			<h4>최근 10분 CPU사용률(5초단위)</h4>
+			<div class="linebar" id="cpuinfo"></div>
+		</div>
+
+		<div class="chart-panel normal-panel">
+			<h4>자바힙(MB단위)</h4>
+			<div class="linebar" id="javaheap"></div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="chart-panel normal-panel">
+			<h4>현재 디스크 사용량(GB단위)</h4>
+			<div class="linebar" id="disk"></div>
+		</div>
+
+		<div class="chart-panel normal-panel">
+			<h4>최근 일주일 디스크 사용 추이(GB단위)</h4>
+			<div class="linebar" id="disk-trend"></div>
+		</div>
+
+		<div class="chart-panel normal-panel">
+			<h4>최근 10분간 GC 소요시간 분포 (밀리초)</h4>
+			<div id="gc"></div>
+		</div>
+	</div>
+</body>
+</html>

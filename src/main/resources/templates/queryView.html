@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>Logpresso SPRING 예제 ::: 쿼리</title>
+<script type="text/javascript" src="/js/jquery.3.2.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="/js/query.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="/css/bootstrap-table.min.css" />
+<link rel="stylesheet" href="/css/query.css" />
+
+</head>
+
+<body>
+	<div id="fixed-menu">
+		<img id="logoimg" src="/image/menu_logo.png" />
+		<div class="menu">
+			<span onclick="location.href='/'" style="cursor: pointer;">홈</span>
+		</div>
+		<div class="menu">쿼리</div>
+		<div class="menu">
+			<span onclick="location.href='/sdk'" style="cursor: pointer;">SDK
+				설명</span>
+		</div>
+		<img id="menu_img" src="/image/btn_sns01.png" usemap="#snsimgmap" />
+		<map id="snsimgmap" name="snsimgmap">
+			<area shape="circle" alt="eediom" title="eediom" coords="13,13,13"
+				href="https://logpresso.com" target="_blank" />
+			<area shape="circle" alt="example" title="example" coords="50,13,13"
+				href="https://github.com/araqne/logpresso-examples" target="_blank" />
+			<area shape="circle" alt="sdk" title="sdk" coords="87,13,13"
+				href="https://github.com/logpresso/logpresso-sdk-java"
+				target="_blank" />
+
+			<area shape="circle" alt="facebook" title="facebook"
+				coords="122,13,13" href="https://www.facebook.com/eediom"
+				target="_blank" />
+			<area shape="circle" alt="linkedin" title="linkedin"
+				coords="158,13,13"
+				href="https://www.linkedin.com/company/eediom-inc-" target="_blank" />
+			<area shape="circle" alt="twitter" title="twitter" coords="193,13,13"
+				href="https://twitter.com/logpresso" target="_blank" />
+		</map>
+	</div>
+	<div class="panel panel-default query-input">
+		<div class="panel-heading">
+			<div class="qarea">
+				<textarea class="qbox" id="query-text" autofocus="autofocus"
+					placeholder="여기에 쿼리를 입력하세요"></textarea>
+				<div class="bbox">
+					<button class="btn btn-lg btn-primary lp-btn" onclick="getResult()">▶
+						실행</button>
+					<button class="btn btn-lg btn-warning lp-btn" onclick="stopQuery()">■
+						중지</button>
+					<div>
+						<button class="btn btn-sm btn-default lp-init"
+							onClick="initQuery()">초기화</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body query-status">
+			<div class="rcount">
+				결과 건수 <span class="badge" id="qcount"></span>
+			</div>
+			<div class="queryID">
+				쿼리아이디 <span class="badge" id="qid"></span><span class="badge"
+					id="qstatus"></span>
+			</div>
+
+			<div class="input-group lp-move">
+				<input type="text" class="form-control"
+					aria-describedby="basic-addon2" style="height: 29px" id="page-move"
+					placeholder="1"></input> <span class="input-group-addon btn"
+					id="basic-addon2" style="height: 29px" onClick="getSubResult()">이동</span>
+			</div>
+			<div class="qpage">
+				전체 페이지 수 <span class="badge" id="qpage-count">0</span>
+			</div>
+		</div>
+	</div>
+	<div class="well result-panel" style="margin-top: 0px">
+		<div class="table-responsive">
+			<table id="result-table" style="font-size: 0.7em" data-toggle="table">
+				<thead>
+					<tr></tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<div class="panel panel-default query-tree">
+		<div class="panel-heading tree-head">
+			<span id="qstart"></span>
+		</div>
+		<div class="panel-body tree">
+			<span id="qnum"></span>
+			<ul id="qbranch" style="list-style: none; padding-left: 5px">
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
